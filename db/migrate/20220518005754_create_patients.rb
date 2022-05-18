@@ -4,7 +4,7 @@ class CreatePatients < ActiveRecord::Migration[6.1]
       t.string :name
       t.string :breed
       t.integer :age
-      t.real :weight
+      t.decimal :weight
       t.string :owner_id
     end
   end
