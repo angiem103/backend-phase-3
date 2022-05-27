@@ -42,6 +42,19 @@ class App < Sinatra::Base
     patient.to_json
   end
 
+  post '/patients' do
+    patient = Patient.create(
+      name: params[:name],
+      breed: params[:breed],
+      age: params[:age],
+      weight: params[:weight],
+      owner_id: params[owner_id],
+      animal_type: params[animal_type],
+      sex: params[sex]
+    )
+    patient.to_json
+  end
+
   get '/owners' do
     owners = Owner.all.order(:id)
     owners.to_json
