@@ -29,13 +29,13 @@ class ApplicationController < Sinatra::Base
 
   post '/patients' do
     patient = Patient.create(
-      name: params[:name],
-      breed: params[:breed],
-      age: params[:age],
-      weight: params[:weight],
-      owner_id: params[owner_id],
-      animal_type: params[animal_type],
-      sex: params[sex]
+      name:params[:name],
+      breed:params[:breed],
+      age:params[:age],
+      weight:params[:weight],
+      owner_id:params[owner_id],
+      animal_type:params[animal_type],
+      sex:params[sex]
     )
     patient.to_json
   end
