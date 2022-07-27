@@ -13,7 +13,7 @@ class ApplicationController < Sinatra::Base
   get '/veterinarians/:id' do
 
     vet = Veterinarian.find(params[:id])
-    vet.to_json(include: { appointments: { include: :patient } })
+    vet.to_json(include: { appointments: {include: :patient } })
   end
 
   get '/patients' do
