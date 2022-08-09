@@ -74,10 +74,26 @@ class ApplicationController < Sinatra::Base
     appts.to_json
   end
 
+  get '/appointments/:id' do
+    appts = Appointment.find(params[:id])
+    appts.to_json
+  end
+
   delete '/appointments/:id' do
     appointment = Appointment.find(params[:id])
     appointment.destroy
     appointment.to_json
+  end
+
+  post '/appointments' do
+    appointment = Appointment.create(
+      veterinarian_id: params[:veterinarian_id],
+      patient_id: params[:patient_id],
+      date: params[:date],
+      time: params[:time]
+    )
+    appointment.to_json
+
   end
 
 
