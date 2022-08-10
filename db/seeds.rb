@@ -22,11 +22,11 @@ Patient.create(name: "Sashimi", animal_type: "fish", breed: "butterfly fish", ag
     )
 end
 
-Appointment.create(veterinarian_id: 1, patient_id: 1, date: Faker::Date.between(from: '2022-06-01', to: '2022-08-15'), time: "1:00 p.m.")
-Appointment.create(veterinarian_id: 1, patient_id: 2, date: Faker::Date.between(from: '2022-06-01', to: '2022-08-15'), time: "3:00 p.m.")
-Appointment.create(veterinarian_id: 1, patient_id: 3, date: Faker::Date.between(from: '2022-06-01', to: '2022-08-15'), time: "9:00 a.m.")
-Appointment.create(veterinarian_id: 2, patient_id: 7, date: Faker::Date.between(from: '2022-06-01', to: '2022-08-15'), time: "11:00 a.m.")
-Appointment.create(veterinarian_id: 2, patient_id: 5, date: Faker::Date.between(from: '2022-06-01', to: '2022-08-15'), time: "2:00 p.m.")
-Appointment.create(veterinarian_id: 2, patient_id: 8, date: Faker::Date.between(from: '2022-06-01', to: '2022-08-15'), time: "9:30 p.m.")
+Appointment.create(veterinarian_id: 1, patient_id: 1, date: Faker::Date.between(from: '2022-09-01', to: '2022-12-15'), time: "1:00 p.m.")
+Appointment.create(veterinarian_id: 1, patient_id: 2, date: Faker::Date.between(from: '2022-09-01', to: '2022-12-15'), time: "3:00 p.m.")
+Appointment.create(veterinarian_id: 1, patient_id: 3, date: Faker::Date.between(from: '2022-09-01', to: '2022-12-15'), time: "9:00 a.m.")
+Appointment.create(veterinarian_id: 2, patient_id: 7, date: Faker::Date.between(from: '2022-09-01', to: '2022-12-15'), time: "11:00 a.m.")
+Appointment.create(veterinarian_id: 2, patient_id: 5, date: Faker::Date.between(from: '2022-09-01', to: '2022-12-15'), time: "2:00 p.m.")
+Appointment.create(veterinarian_id: 2, patient_id: 8, date: Faker::Date.between(from: '2022-09-01', to: '2022-12-15'), time: "9:30 p.m.")
 
 puts "✅ Done seeding!"
