@@ -71,7 +71,7 @@ class ApplicationController < Sinatra::Base
 
   get '/appointments' do
     appts = Appointment.all.order(:id)
-    appts.to_json
+    appts.to_json(include: [:patient, :veterinarian])
   end
 
   get '/appointments/:id' do
