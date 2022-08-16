@@ -42,6 +42,8 @@ class ApplicationController < Sinatra::Base
       animal_type:params[:animal_type],
       sex:params[:sex]
     )
+
+    binding.pry
     patient.to_json(include: { appointments: { include: :veterinarian } })
   end
 
@@ -59,15 +61,6 @@ class ApplicationController < Sinatra::Base
     patient.to_json(include: { appointments: { include: :veterinarian } })
   end
 
-  get '/owners' do
-    owners = Owner.all.order(:id)
-    owners.to_json
-  end
-
-  get '/owners/:id' do
-    owner = Owner.find(params[:id])
-    owner.to_json
-  end
 
   get '/appointments' do
     appts = Appointment.all.order(:id)
